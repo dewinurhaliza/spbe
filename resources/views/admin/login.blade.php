@@ -6,9 +6,7 @@
     <title>Login</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
@@ -70,6 +68,7 @@
             font-size: 14px;
             margin-bottom: 20px;
             color: #0a0f57;
+            
         }
         .login-right button {
             padding: 12px;
@@ -95,11 +94,17 @@
     <div class="login-container">
         <div class="login-left">
             <img src="{{ asset('asset/img/logo-spbe.png') }}" alt="Logo SPBE">
-            <h2>Login to SPPBE Pemerintah Kota Bandar Lampung</h2>
+            <h2>Login to SPBE<br>Pemerintah Kota Bandar Lampung</h2>
         </div>
         <div class="login-right">
-            <form method="POST" action="{{ route('login') }}">
+            <form method="POST" action="{{ url('/login') }}">
                 @csrf
+                @if ($errors->any())
+                    <div style="color: red; margin-bottom: 10px;">
+                        {{ $errors->first() }}
+                    </div>
+                @endif
+
                 <label for="email">Username/Email</label>
                 <input type="text" id="email" name="email" required autofocus>
 
@@ -107,7 +112,7 @@
                 <input type="password" id="password" name="password" required>
 
                 <div class="forgot">
-                    <a href=#>Forgot Password?</a>
+                    <a href="#">Forgot Password?</a>
                 </div>
 
                 <button type="submit">Login</button>

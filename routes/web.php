@@ -1,15 +1,17 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
-//ADMIN
-Route::get('/login', function () {
-    return view('admin/login');
-});
+
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
 
 Route::get('/dashboardadmin', function () {
-    return view('admin/dashboard_admin');
-});
+    return view('admin.dashboard_admin');
+})->middleware('auth');
 
 
 //USER
