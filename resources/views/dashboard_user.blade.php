@@ -64,10 +64,10 @@
         }
 
         .spbe-banner {
-        position: relative;
-        width: 100%;
-        height: 400px; /* tambahkan tinggi tetap */
-        overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 400px; /* tambahkan tinggi tetap */
+            overflow: hidden;
         }
 
         .banner-slide {
@@ -83,8 +83,8 @@
             }
 
         .spbe-banner .banner-slide.active {
-        opacity: 1;
-        z-index: 1;
+            opacity: 1;
+            z-index: 1;
         }
 
         .slide-btn {
@@ -104,16 +104,15 @@
 
         .slide-btn:hover {
             background-color: rgba(0, 0, 0, 0.7);
-            }
+        }
 
-            .slide-btn.prev {
+        .slide-btn.prev {
             left: 20px;
-            }
+        }
 
-            .slide-btn.next {
+        .slide-btn.next {
             right: 20px;
-            }
-
+        }
 
         .spbe-info-section {
             margin-top: 50px;
@@ -296,10 +295,6 @@
         <button class="slide-btn next" onclick="nextSlide()">&#10095;</button>
 
     </div>
-
-
-
-
 
     <div class="spbe-info-section">
         <div class="info-card">
