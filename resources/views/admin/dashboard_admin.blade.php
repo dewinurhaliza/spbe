@@ -253,7 +253,7 @@
                 <li><a href="#">Indikator SPBE</a></li>
                 <li><a href="#">Profile</a></li>
                 <li><a href="#">Berita</a></li>
-                <li><a href="#">Download</a></li>
+                <li><a href="{{ route('admin.download') }}">Download</a></li>
                 <li><a href="#">Galeri</a></li>
                 <li><a href="#">Kontak</a></li>
             </nav>
